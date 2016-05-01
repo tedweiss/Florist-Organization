@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Orders</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>Check categories you want to see.</h1>
+<form id="displayCheckbox" action="display.php" method="post">
+    <div>
+        <input type="checkbox" name="datePlaced" id="datePlaced">
+        <label for="datePlaced">Date Placed</label>
+    </div>
+    <div>
+        <input type="checkbox" name="timePlaced" id="timePlaced">
+        <label for="timePlaced">Time Placed</label>
+    </div>
+    <div>
+        <input type="checkbox" name="cityOrder" id="cityOrder">
+        <label for="cityOrder">City Order From</label>
+    </div>
+    <div>
+        <input type="checkbox" name="stateOrder" id="stateOrder">
+        <label for="stateOrder">State Order From</label>
+    </div>
+    <div>
+        <input type="checkbox" name="citySent" id="citySent">
+        <label for="citySent">City Order Sent To</label>
+    </div>
+    <div>
+        <input type="checkbox" name="stateSent" id="stateSent">
+        <label for="stateSent">State Order Sent To</label>
+    </div>
+    <div>
+        <input type="checkbox" name="dateDelivery" id="dateDelivery">
+        <label for="dateDelivery">Delivery Date</label>
+    </div>
+    <div>
+        <input type="checkbox" name="occasion" id="occasion">
+        <label for="occasion">Occasion</label>
+    </div>
+    <div>
+        <input type="checkbox" name="callerName" id="callerName">
+        <label for="callerName">Name of Caller</label>
+    </div>
+    <div>
+        <input type="checkbox" name="recipientName" id="recipientName">
+        <label for="recipientName">Name of Recipient</label>
+    </div>
+    <div>
+        <input type="checkbox" name="firstChoice" id="firstChoice">
+        <label for="firstChoice">First Choice</label>
+    </div>
+    <div>
+        <input type="checkbox" name="orderAmount" id="orderAmount">
+        <label for="orderAmount">Order Amount</label>
+    </div>
+    <div>
+        <input type="checkbox" name="taxAmount" id="taxAmount">
+        <label for="taxAmount">Tax Amount</label>
+    </div>
+    <div>
+        <input type="checkbox" name="deliveryAmount" id="deliveryAmount">
+        <label for="deliveryAmount">Delivery Amount</label>
+    </div>
+    <div>
+        <input type="checkbox" name="grandTotal" id="grandTotal">
+        <label for="grandTotal">Grand Total</label>
+    </div>
+    <div>
+        <input type="checkbox" name="sentFlorist" id="sentFlorist">
+        <label for="sentFlorist">Total Sent to Florist</label>
+    </div>
+    <div>
+        <input type="checkbox" name="floristName" id="floristName">
+        <label for="floristName">Florist</label>
+    </div>
+    <div>
+        <input type="checkbox" name="promoCode" id="promoCode">
+        <label for="promoCode">Promo Code</label>
+    </div>
+    <div>
+        <input type="checkbox" name="confirmNum" id="confirmNum">
+        <label for="confirmNum">Confirmation Number</label>
+    </div>
+    <div>
+        <input type="checkbox" name="refusal" id="refusal">
+        <label for="refusal">Refusal</label>
+    </div>
+    <div>
+        <input type="checkbox" name="notes" id="notes">
+        <label for="notes">Notes</label>
+    </div>
+    <div id="date-choose">
+        <p>Choose the dates you want to see.</p>
+        <div>
+            <label for="fromDate">From Date:</label>
+            <input type="date" name="fromDate" id="fromDate" required>
+        </div>
+        <div>
+            <label for="toDate">To Date:</label>
+            <input type="date" name="toDate" id="toDate" required>
+        </div>
+    </div>
+    <div id="submit-div">
+        <input id="Submit" type="submit" onclick="checkDate()" value="Display Orders">
+    </div>
+</form>
+<script type="text/javascript">
+    function checkDate(){
+        var firstDate = document.getElementById("fromDate").value;
+        var secondDate = document.getElementById("toDate").value;
+        
+        if(firstDate >= secondDate){
+            alert("Make sure your second date comes after your first.");
+            return false;
+            console.log("check");
+        }
+    }
+</script>
+
+</body>
+</html>
