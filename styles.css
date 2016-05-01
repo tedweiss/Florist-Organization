@@ -1,0 +1,59 @@
+input, select {
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    display: block;
+}
+select, input[type="submit"] {
+    width: 215px !important;
+}
+input[type="date"], input[type="time"] {
+    padding: 2px 5px;
+}
+#submit-div {
+    display: block !important;
+    width: 100% !important;
+    position: relative;
+    height: 50px;
+}
+#Submit {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -10px;
+}
+#orderForm {
+    text-align: center;
+    font-family: Arial;
+}
+#orderForm div {
+    display: inline-block;
+    width: 215px;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+}
+.category {
+    text-align: center;
+}
+.category div {
+    display: inline-block;
+    margin: 0;
+}
+.category p {
+    padding: 5px;
+    margin: 0;
+    border: 1px solid black;
+    border-top: none;
+    font-family: Arial;
+    font-size: 12px;
+    text-align: left;
+}
+.category p:first-child {
+    font-weight: bold;
+    font-size: 14px;
+    border-top: 1px solid black;
+    text-align: center;
+}
