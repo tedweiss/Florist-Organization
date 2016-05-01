@@ -197,7 +197,16 @@
     </div>
     <div>
         <label for="promoCode">Promo Code:</label>
-        <input type="text" name="promoCode" id="promoCode">
+        <select name="promoCode" id="promoCode" required>
+            <option value="" disabled selected>Promo Code</option>
+            <option value="A">A - Constant Contact</option>
+            <option value="B">B - HyperMail</option>
+            <option value="C">C - SendGrid</option>
+            <option value="D">D - Sendy</option>
+            <option value="E">E - iContact</option>
+            <option value="E">F - MailChimp</option>
+            <option value="G">G - Google</option>
+        </select>
     </div>
     <div>
         <label for="confirmNum">Confirmation Number:</label>
