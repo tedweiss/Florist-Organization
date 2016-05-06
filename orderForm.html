@@ -4,45 +4,6 @@
 <meta charset="UTF-8">
 <title>Add Orders</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-<style type="text/css">
-    .valid {
-        border: 1px solid green;
-    }
-    .invalid {
-        border: 1px solid red;
-    }
-    .focus {
-        border: 1px solid aliceblue;
-    }
-    .error, .success {
-        display: none;
-    }
-    .initial, input, textarea, select {
-        border: 1px solid gray;
-        background-color: white;
-    }
-    #orderForm input:valid + .error, #orderForm input:valid + .success {
-        display: none;
-    }
-    #orderForm .invalid ~ .error {
-        display: block;
-        color: red;
-        font-weight: bold;
-        text-align: center; 
-    }
-    #orderForm .valid ~ .success {
-        display: block;
-        color: green;
-        font-weight: bold;
-        text-align: center; 
-    }
-    .error-bg {
-        background-color: lightpink;
-    }
-    .success-bg {
-        background-color: lightgreen;
-    }
-</style>
 </head>
 <body>
 <form id="orderForm" action="orders.php" method="post">
@@ -265,44 +226,7 @@
     </div>
 </form>
 
-<script>
-
-var form = document.getElementById("orderForm");
-form.addEventListener("focus", function( event ) {
-  event.target.setAttribute("class", "focus");    
-}, true);
-
-form.addEventListener("blur", function( event ) {
-    checkNotRequiredNotEmpty();
-    checkNotRequiredEmpty();
-    checkRequiredNotEmpty();
-    checkRequiredEmpty();
-}, true);
-
-function checkNotRequiredNotEmpty() {
-    if(event.target.required === false && event.target.value !== ""){
-       event.target.setAttribute("class", "valid success-bg");
-    }    
-}
-
-function checkNotRequiredEmpty() {
-    if (event.target.required === false && event.target.value === ""){
-        event.target.setAttribute("class", "initial");
-    }
-}
-
-function checkRequiredNotEmpty() {
-    if (event.target.required === true && event.target.value !== ""){
-        event.target.setAttribute("class", "valid success-bg");
-    }
-}
-
-function checkRequiredEmpty() {
-    if (event.target.required === true && event.target.value === ""){
-        event.target.setAttribute("class", "invalid error-bg");
-    }
-}
-</script>
+<script src="validateForm.js"></script>
 
 </body>
 </html>

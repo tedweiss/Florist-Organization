@@ -1,3 +1,40 @@
+.valid {
+    border: 1px solid green;
+}
+.invalid {
+    border: 1px solid red;
+}
+.focus {
+    border: 1px solid aliceblue;
+}
+.error, .success {
+    display: none;
+}
+.initial, input, textarea, select {
+    border: 1px solid gray;
+    background-color: white;
+}
+#orderForm input:valid + .error, #orderForm input:valid + .success {
+    display: none;
+}
+#orderForm .invalid ~ .error {
+    display: block;
+    color: red;
+    font-weight: bold;
+    text-align: center; 
+}
+#orderForm .valid ~ .success {
+    display: block;
+    color: green;
+    font-weight: bold;
+    text-align: center; 
+}
+.error-bg {
+    background-color: lightpink;
+}
+.success-bg {
+    background-color: lightgreen;
+}
 h1 {
     text-align: center;
 }
